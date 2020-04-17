@@ -30,5 +30,5 @@ if __name__ == "__main__":
         getInfo(sys.argv[1])
     except IndexError:
         print("[-]IndexError")
-        print("Usage: python iptracker_api.py IP")
+        print("Usage: python iplookup.py IP")
         
