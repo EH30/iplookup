@@ -1,11 +1,12 @@
-import urllib.request
+import requests
 import sys
 import json
 
 def getInfo(IP):
     url = "http://ip-api.com/json/"
-    req = urllib.request.urlopen(url + IP)
-    json_value = json.loads(req.read())
+    req = requests.get(url + IP)
+    json_value = json.loads(req.content.decode())
+    
     try:
         print("IP: ", json_value["query"])
         print("status: ", json_value["status"])
